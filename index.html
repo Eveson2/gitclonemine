@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Redactor</title>
+    <link rel="stylesheet" href="gitclonemine/style.css">
+</head>
+<body>
+    <!-- Main Section -->
+ <main id="index.html">
+  
+  <h1>Text Redactor</h1>
+    <form id="redactForm">
+        <label for="originalText">Texts to Redact:</label><br />
+        <textarea id="originalText" name="originalText" rows="10" cols="50" required></textarea><br /><br />
+
+        <label for="wordsToRedact">Redacted Words:</label><br />
+        <input type="text" id="wordsToRedact" name="wordsToRedact" placeholder="Words to redact (separated by space)" required><br /><br />
+
+        <label for="replacementText">Replacement Text:</label><br />
+        <input type="text" id="replacementText" name="replacementText" placeholder="Replacement text"><br /><br />
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority">
+            <option value="low">*</option>
+            <option value="medium">!!!</option>
+            <option value="high">???</option>
+        </select><br /><br />
+
+        <button type="button" id="redactButton">Redact Now</button>
+    </form>
+
+    <div id="result">
+        <p><strong>Redacted Text:</strong></p>
+        <div id="redactedContent"></div>
+    </div>
+
+    <div id="stats">
+        <p><strong>Statistics:</strong></p>
+        <p id="wordCount">Words Scanned: 0</p>
+        <p id="matchedCount">Words Redacted: 0</p>
+        <p id="charCount">Characters Redacted: 0</p>
+        <p id="timeTaken">Time Taken(s): 0</p><br>
+    </div>
+
+    <script src="gitclonemine/script.js"></script>
+    <footer>
+        &copy; 2023 Okoene Makuochukwu. All Rights Reserved.
+    </footer>
+</body>
+</html>
